@@ -2,6 +2,7 @@ import { useRef } from "react";
 import { cards } from "../constants";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { asset } from "../lib/utils";
 
 const TestimonialSection = () => {
   const vdRef = useRef([]);
@@ -83,7 +84,7 @@ const TestimonialSection = () => {
           >
             <video
               ref={(el) => (vdRef.current[index] = el)}
-              src={card.src}
+              src={asset(card.src)}
               playsInline
               muted
               loop

@@ -1,4 +1,5 @@
 import { useMediaQuery } from "react-responsive";
+import { asset } from "../lib/utils";
 
 const FooterSection = () => {
   const isMobile = useMediaQuery({
@@ -8,7 +9,7 @@ const FooterSection = () => {
   return (
     <section className="footer-section">
       <img
-        src="/images/footer-dip.png"
+        src={asset("/images/footer-dip.png")}
         alt=""
         className="w-full object-cover -translate-y-1"
       />
@@ -22,12 +23,12 @@ const FooterSection = () => {
 
         {isMobile ? (
           <img
-            src="/images/footer-drink.png"
+            src={asset("/images/footer-drink.png")}
             className="absolute top-0 object-contain"
           />
         ) : (
           <video
-            src="/videos/splash.mp4"
+            src={asset("/videos/splash.mp4")}
             autoPlay
             playsInline
             muted
@@ -78,7 +79,7 @@ const FooterSection = () => {
                 placeholder="Enter your email"
                 className="w-full placeholder:font-sans placeholder:text-[#999999]"
               />
-              <img src="/images/arrow.svg" alt="arrow" />
+              <img src={asset("/images/arrow.svg")} alt="arrow" />
             </div>
           </div>
         </div>
